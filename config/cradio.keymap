@@ -49,7 +49,7 @@ ZMK_HOLD_TAP(meh,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_CONDITIONAL_LAYER(bootlayer, SYM NUM, SYS)
+ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
 
 
 ZMK_LAYER(default_layer,
