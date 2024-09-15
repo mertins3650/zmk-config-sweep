@@ -49,7 +49,7 @@ ZMK_HOLD_TAP(meh,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_COMBO(ogicon, &kp LS(N6), 1 3, SYM)
+ZMK_COMBO(ogicon, &kp LS(N6), LT4 LT3, SYM)
 
 ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
 
