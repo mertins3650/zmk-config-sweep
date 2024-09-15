@@ -50,7 +50,7 @@ ZMK_HOLD_TAP(meh,
 )
 
 ZMK_COMBO(ogicon, &kp LS(N6), LT4 LT3, SYM)
-ZMK_COMBO(cmbsymlayer, &mo SYM, LH0 LH0, SYM)
+ZMK_COMBO(cmbsymlayer, &mo SYM, LH0 RH0, SYM)
 
 ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
 
@@ -64,7 +64,7 @@ ZMK_LAYER(default_layer,
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp Q         &kp X         &kp M         &kp C         &kp V                  &kp K         &kp P         &kp COMMA     &kp FSLH       &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &lt EXT TAB   &meh LC(LS(LALT))SPC   &kp LSHFT     &lt SYM BSPC
+                                                      &mo EXT       &meh LC(LS(LALT))SPC   &kp LSHFT     &mo SYM
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
 
