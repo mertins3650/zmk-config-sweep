@@ -49,8 +49,8 @@ ZMK_HOLD_TAP(meh,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_COMBO(ogicon, &kp LS(N6), LT4 LT3, SYM)
-ZMK_COMBO(cmbsymlayer, &mo SYS, LH0 RH0)
+ZMK_COMBO(ogicon, &kp LS(N6), LT2 LT3, SYM)
+ZMK_COMBO(cmbsymlayer, &to SYS, LH0 RH0)
 
 ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
 
@@ -104,6 +104,6 @@ ZMK_LAYER(sys_layer,
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &bootloader   ___           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2           ___           ___            ___          ___            &bootloader
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      ___           ___                    ___           ___
+                                                      &to DEF           ___                    ___           ___
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
