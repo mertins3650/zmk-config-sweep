@@ -50,7 +50,7 @@ ZMK_HOLD_TAP(meh,
 )
 
 ZMK_COMBO(ogicon, &kp LS(N6), LT4 LT3, SYM)
-ZMK_COMBO(cmbsymlayer, &mo SYM, LH0 RH0)
+ZMK_COMBO(cmbsymlayer, &mo SYS, LH0 RH0)
 
 ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
 
