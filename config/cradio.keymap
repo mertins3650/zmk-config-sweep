@@ -50,6 +50,7 @@ ZMK_HOLD_TAP(meh,
 )
 
 ZMK_COMBO(ogicon, &kp LS(N6), LT4 LT3, SYM)
+ZMK_COMBO(cmbsymlayer, &mo SYM, LH0 LH0, SYM)
 
 ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
 
@@ -59,9 +60,9 @@ ZMK_LAYER(default_layer,
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &kp B         &kp L         &kp D         &kp W         &kp Z                  &kp DOT       &kp F         &kp U         &kp O         &kp J
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp N         &hml LGUI R   &kp T         &hml LCTRL S  &kp G                  &kp Y         &hmr LCTRL H  &kp E         &hmr LGUI A   &kp I
+            &hml LALT N   &hml LGUI R   &kp T         &hml LCTRL S  &kp G                  &kp Y         &hmr LCTRL H  &kp E         &hmr LGUI A   &hmr LALT I
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp Q         &hml LALT X   &kp M         &kp C         &kp V                  &kp K         &kp P         &kp COMMA     &hmr LALT FSLH &kp ENTER
+            &kp Q         &kp X         &kp M         &kp C         &kp V                  &kp K         &kp P         &kp COMMA     &kp FSLH       &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       &lt EXT TAB   &meh LC(LS(LALT))SPC   &kp LSHFT     &lt SYM BSPC
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
