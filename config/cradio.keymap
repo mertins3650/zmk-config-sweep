@@ -49,8 +49,18 @@ ZMK_HOLD_TAP(meh,
     bindings = <&kp>, <&kp>;
 )
 
+
+// tap: copy | double-tap: cut
+ZMK_TAP_DANCE(copy_cut, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp LC(C)>, <&kp LC(X)>;
+)
+
+ZMK_COMBO(copy_cut, &copy_cut,   LB1 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
 ZMK_COMBO(ogicon, &kp LS(N6), LT2 LT3, SYM) // &
-ZMK_COMBO(cmbsymlayer, &to SYS, LT3 RT1, DEF)
+ZMK_COMBO(cmbsym, &to SYS, LT3 RT1, ALL) // SYS layer
+
+ZMK_CONDITIONAL_LAYER(sysl, SYM EXT, SYS)
 
 
 ZMK_LAYER(default_layer,
