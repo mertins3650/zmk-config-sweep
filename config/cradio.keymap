@@ -51,10 +51,7 @@ ZMK_HOLD_TAP(meh,
 
 
 ZMK_COMBO(ogicon, &kp LS(N6), LT2 LT3, SYM) // &
-ZMK_COMBO(cmbsym, &tog SYS, LT1 RT3, ALL) // SYS layer
-
-ZMK_CONDITIONAL_LAYER(sysl, SYM EXT, SYS)
-
+ZMK_COMBO(cmbsym, &mo SYS, RH1 RH0, DEF) // SYS layer
 
 ZMK_LAYER(default_layer,
 
@@ -78,7 +75,7 @@ ZMK_LAYER(sym_layer,
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp NUBS      &kp LS(NUBS)  &kp RA(NUBS)  &kp AMPS      &kp RA(RBKT)           &kp BSLH      &kp LS(EQUAL) &kp RA(EQUAL)  &kp LS(BSLH) &kp MINUS
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &kp LGUI      &kp LC(LGUI)           &tog SYS      ___
+                                                      &kp LGUI      &kp LC(LGUI)           &mo SYS       ___
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
 
@@ -91,7 +88,7 @@ ZMK_LAYER(ext_layer,
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp RA(N3)    &kp LS(GRAVE) &kp RA(E)     &kp DEL       &kp LC(DEL)            &kp QMARK      &kp SEMI     &kp SQT       &kp LBKT      &kp PG_DN
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      ___           &tog SYS               &kp LSHFT      &kp LGUI
+                                                      ___           &mo SYS                &kp LSHFT      &kp LGUI
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
 
