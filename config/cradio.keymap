@@ -49,10 +49,8 @@ ZMK_HOLD_TAP(meh,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_COMBO(ogicon, &kp LS(N6), LT2 LT3, SYM)
-ZMK_COMBO(cmbsymlayer, &to SYS, LH0 RH0)
-
-ZMK_CONDITIONAL_LAYER(bootlayer, SYM EXT, SYS)
+ZMK_COMBO(ogicon, &kp LS(N6), LT2 LT3, SYM) // &
+ZMK_COMBO(cmbsymlayer, &to SYS, LT3 RT1, DEF)
 
 
 ZMK_LAYER(default_layer,
@@ -64,7 +62,7 @@ ZMK_LAYER(default_layer,
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &kp Q         &kp X         &kp M         &kp C         &kp V                  &kp K         &kp P         &kp COMMA     &kp FSLH       &kp ENTER
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &mo EXT       &meh LC(LS(LALT))SPC   &kp LSHFT     &mo SYM
+                                                      &mo EXT       &meh LC(LS(LALT)) SPC  &kp LSHFT     &mo SYM
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
 
@@ -84,11 +82,11 @@ ZMK_LAYER(sym_layer,
 ZMK_LAYER(ext_layer,
 
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-            &kp ESC       &kp LALT      &kp LS(N6)    &kp LC(TAB)   &kp TAB                &kp EXCL       &kp HOME     &kp END       &kp BSPC  &kp LC(BSPC)
+            &kp ESC       &kp LALT      &kp LC(LALT)  &kp LC(TAB)   &kp TAB                &kp EXCL       &kp HOME     &kp END       &kp BSPC  &kp LC(BSPC)
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp RA(N3)    &kp LS(GRAVE) &kp RA(E)     &kp LS(RBKT)  &kp LS(N3)             &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT     &kp PG_UP
+            ___           &kp LS(N6)    &kp LS(RBKT)  &kp LS(N3)    &kp RA(N2)             &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT     &kp PG_UP
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &kp LS(N6)    &kp LC(LALT)  &kp DEL       &kp LC(DEL)   &kp RA(N2)             &kp QMARK      &kp SEMI     &kp SQT       &kp LBKT      &kp PG_DN
+            &kp RA(N3)    &kp LS(GRAVE) &kp RA(E)     &kp DEL       &kp LC(DEL)            &kp QMARK      &kp SEMI     &kp SQT       &kp LBKT      &kp PG_DN
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                       ___           &mo SYS                &kp LSHFT      &kp LGUI
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
@@ -104,6 +102,6 @@ ZMK_LAYER(sys_layer,
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
             &bootloader   ___           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2           ___           ___            ___          ___            &bootloader
         //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                      &to DEF           ___                    ___           ___
+                                                      &to DEF       &to DEF                ___           ___
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
