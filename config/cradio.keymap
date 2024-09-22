@@ -54,9 +54,9 @@ ZMK_HOLD_TAP(meh,
 
 ZMK_COMBO(cmbsym, &mo SYS, RH1 RH0, DEF) // SYS layer
 ZMK_COMBO(cmbsym2, &mo SYS, LH1 LH0, DEF) // SYS layer
-ZMK_COMBO(cmbdev, &to DEV, RB0 RB1 RB2, DEF) // dvorak_layer
-ZMK_COMBO(cmbgra, &to GRA, RB0 RB1 RB2, DEV) // graphite_layer
-ZMK_COMBO(cmbqwe, &to DEF, RB0 RB1 RB2, GRA) // qwerty_layer
+ZMK_COMBO(cmbdev, &tog DEV, RB0 RB1 RB2, DEF) // dvorak_layer
+ZMK_COMBO(cmbgra, &tog GRA, RB0 RB1 RB2, DEV) // graphite_layer
+ZMK_COMBO(cmbqwe, &tog DEF, RB0 RB1 RB2, GRA) // qwerty_layer
 
 // QWERTY
 ZMK_LAYER(default_layer,
