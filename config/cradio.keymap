@@ -56,7 +56,7 @@ ZMK_HOLD_TAP(meh,
 ZMK_COMBO(cmbsym, &mo SYS, RH1 RH0, DEF) // SYS layer
 ZMK_COMBO(cmbsym2, &mo SYS, LH1 LH0, DEF) // SYS layer
 ZMK_COMBO(cmbdev, &to DEV, RB0 RB1 RB2, DEF) // dvorak_layer
-ZMK_COMBO(cmbcol, &to GRA, RB0 RB1 RB2, DEV) // colemakdh
+ZMK_COMBO(cmbcol, &to COL, RB0 RB1 RB2, DEV) // colemakdh
 ZMK_COMBO(cmbgra, &to GRA, RB0 RB1 RB2, COL) // graphite_layer
 ZMK_COMBO(cmbqwe, &to DEF, RB0 RB1 RB2, GRA) // qwerty_layer
 
