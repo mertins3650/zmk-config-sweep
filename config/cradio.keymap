@@ -19,10 +19,11 @@
 
 #define DEF 0
 #define DEV 1
-#define GRA 2
-#define SYM 3
-#define EXT 4
-#define SYS 5
+#define COL 2
+#define GRA 3
+#define SYM 4
+#define EXT 5
+#define SYS 6
 
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
@@ -55,7 +56,8 @@ ZMK_HOLD_TAP(meh,
 ZMK_COMBO(cmbsym, &mo SYS, RH1 RH0, DEF) // SYS layer
 ZMK_COMBO(cmbsym2, &mo SYS, LH1 LH0, DEF) // SYS layer
 ZMK_COMBO(cmbdev, &to DEV, RB0 RB1 RB2, DEF) // dvorak_layer
-ZMK_COMBO(cmbgra, &to GRA, RB0 RB1 RB2, DEV) // graphite_layer
+ZMK_COMBO(cmbcol, &to GRA, RB0 RB1 RB2, DEV) // colemakdh
+ZMK_COMBO(cmbgra, &to GRA, RB0 RB1 RB2, COL) // graphite_layer
 ZMK_COMBO(cmbqwe, &to DEF, RB0 RB1 RB2, GRA) // qwerty_layer
 
 // QWERTY
@@ -85,6 +87,22 @@ ZMK_LAYER(dvorak_layer,
                                                       &mo EXT       &meh LC(LS(LALT)) SPC  &kp LSHFT     &mo SYM
         //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
 )
+
+//COLEMAK DH
+ZMK_LAYER(graphite_layer,
+
+        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+            &kp Q         &kp W         &kp F         &kp P         &kp B                  &kp J         &kp L         &kp U         &kp Y         &kp ENTER
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &hml LALT A   &hml LGUI R   &kp S         &hml LCTRL T  &kp G                  &kp M         &hmr LCTRL N  &kp E         &hmr LGUI I   &hmr LALT O
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &kp Z         &kp X         &kp C         &kp D         &kp V                  &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH
+        //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤        ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                      &mo EXT       &meh LC(LS(LALT)) SPC  &kp LSHFT     &mo SYM
+        //                                          ╰─────────────┴─────────────╯        ╰─────────────┴─────────────╯
+)
+
+
 
 //GRAPHITE
 ZMK_LAYER(graphite_layer,
